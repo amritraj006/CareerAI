@@ -57,15 +57,15 @@ const LearningPage = () => {
 
   if (isLoading) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 flex items-center justify-center">
+      <div className="min-h-screen bg-gray-900 flex items-center justify-center">
         <motion.div
           animate={{ scale: [1, 1.02, 1], opacity: [0.8, 1, 0.8] }}
           transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
           className="flex flex-col items-center"
         >
-          <div className="w-32 h-32 bg-gradient-to-r from-gray-200 to-gray-300 dark:from-gray-700 dark:to-gray-600 rounded-full mb-6 animate-pulse"></div>
-          <div className="h-6 bg-gradient-to-r from-gray-200 to-gray-300 dark:from-gray-700 dark:to-gray-600 rounded w-64 mb-4 animate-pulse"></div>
-          <div className="h-4 bg-gradient-to-r from-gray-200 to-gray-300 dark:from-gray-700 dark:to-gray-600 rounded w-56 mb-3 animate-pulse"></div>
+          <div className="w-32 h-32 bg-gray-700 rounded-full mb-6 animate-pulse"></div>
+          <div className="h-6 bg-gray-700 rounded w-64 mb-4 animate-pulse"></div>
+          <div className="h-4 bg-gray-700 rounded w-56 mb-3 animate-pulse"></div>
         </motion.div>
       </div>
     );
@@ -76,17 +76,17 @@ const LearningPage = () => {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 flex items-center justify-center"
+        className="min-h-screen bg-gray-900 flex items-center justify-center"
       >
         <div className="text-center p-8 max-w-md">
           <motion.h1 
             initial={{ y: -20 }}
             animate={{ y: 0 }}
-            className="text-3xl font-bold text-gray-800 dark:text-white mb-4 bg-gradient-to-r from-primary to-primary-dull bg-clip-text text-transparent"
+            className="text-3xl font-bold text-white mb-4 bg-gradient-to-r from-primary to-primary-dull bg-clip-text text-transparent"
           >
             Course Not Found
           </motion.h1>
-          <motion.p className="text-lg text-gray-600 dark:text-gray-300">
+          <motion.p className="text-lg text-gray-300">
             The requested course doesn't exist in our library.
           </motion.p>
           <motion.button
@@ -107,13 +107,13 @@ const LearningPage = () => {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 flex items-center justify-center"
+        className="min-h-screen bg-gray-900 flex items-center justify-center"
       >
         <div className="text-center p-8 max-w-md">
-          <motion.h1 className="text-3xl font-bold text-gray-800 dark:text-white mb-4 bg-gradient-to-r from-primary to-primary-dull bg-clip-text text-transparent">
+          <motion.h1 className="text-3xl font-bold text-white mb-4 bg-gradient-to-r from-primary to-primary-dull bg-clip-text text-transparent">
             Access Denied
           </motion.h1>
-          <motion.p className="text-lg text-gray-600 dark:text-gray-300 mb-6">
+          <motion.p className="text-lg text-gray-300 mb-6">
             {isSignedIn ? 'You need to enroll in this course.' : 'Sign in to access this course.'}
           </motion.p>
           <motion.button
@@ -141,7 +141,7 @@ const LearningPage = () => {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 0.3 }}
-        className="min-h-screen bg-gradient-to-br pt-16 md:pt-30 from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800"
+        className="min-h-screen pt-16 md:pt-30 bg-gray-900"
       >
         {/* Navigation Buttons */}
         <div className="container mx-auto px-4 pt-6">
@@ -149,7 +149,7 @@ const LearningPage = () => {
             <motion.button
               onClick={() => navigate('/my-dashboard')}
               whileHover={{ x: -3 }}
-              className="flex items-center gap-2 px-4 py-2 bg-white dark:bg-gray-800 rounded-lg shadow-md text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+              className="flex items-center gap-2 px-4 py-2 bg-gray-800 rounded-lg shadow-md text-gray-200 hover:bg-gray-700 transition-colors"
             >
               <FiArrowLeft className="w-5 h-5" />
               <span>Dashboard</span>
@@ -158,7 +158,7 @@ const LearningPage = () => {
             <motion.button
               onClick={() => navigate('/resources')}
               whileHover={{ x: 3 }}
-              className="flex items-center gap-2 px-4 py-2 bg-white dark:bg-gray-800 rounded-lg shadow-md text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+              className="flex items-center gap-2 px-4 py-2 bg-gray-800 rounded-lg shadow-md text-gray-200 hover:bg-gray-700 transition-colors"
             >
               <span>Browse Courses</span>
               <FiArrowRight className="w-5 h-5" />
@@ -168,8 +168,7 @@ const LearningPage = () => {
 
         <main className="container mx-auto px-4 py-8">
           <BlurCircle top="-100px" left="-100px" color="purple" size="lg" />
-          <BlurCircle bottom="-100px" right="-100px" color="blue" size="lg"
-           />
+          <BlurCircle bottom="-100px" right="-100px" color="blue" size="lg" />
           <BlurCircle top="30%" right="10%" color="indigo" size="md" opacity="30" />
           <div className="flex flex-col lg:flex-row gap-8">
             {/* Left Column - Video & Details */}
@@ -206,32 +205,32 @@ const LearningPage = () => {
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.2 }}
-                className="mt-8 p-8 rounded-xl bg-white dark:bg-gray-800 shadow-lg border border-gray-200 dark:border-gray-700"
+                className="mt-8 p-8 rounded-xl bg-gray-800 shadow-lg border border-gray-700"
               >
                 <div className="flex flex-col sm:flex-row justify-between items-start gap-4 mb-6">
                   <div>
-                    <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
+                    <h1 className="text-3xl font-bold text-white mb-2">
                       {course.name}
                     </h1>
                     <div className="flex flex-wrap gap-2">
-                      <span className="px-3 py-1 rounded-full text-sm font-medium bg-primary/10 text-primary dark:bg-primary/20">
+                      <span className="px-3 py-1 rounded-full text-sm font-medium bg-primary/20 text-primary">
                         {course.category}
                       </span>
-                      <span className="px-3 py-1 rounded-full text-sm font-medium bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400">
+                      <span className="px-3 py-1 rounded-full text-sm font-medium bg-green-900/30 text-green-400">
                         {course.price} • Paid Course
                       </span>
                     </div>
                   </div>
                 </div>
 
-                <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
+                <p className="text-lg text-gray-300 mb-8">
                   {course.description}
                 </p>
 
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-4 flex items-center gap-2">
-                    <span className="bg-primary/10 dark:bg-primary/20 p-1 rounded-full">
-                      <FiCheck className="text-primary dark:text-primary-light" />
+                  <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">
+                    <span className="bg-primary/20 p-1 rounded-full">
+                      <FiCheck className="text-primary-light" />
                     </span>
                     Skills You'll Gain
                   </h3>
@@ -242,7 +241,7 @@ const LearningPage = () => {
                         initial={{ scale: 0 }}
                         animate={{ scale: 1 }}
                         transition={{ delay: 0.05 * index }}
-                        className="px-3 py-1.5 rounded-full text-sm font-medium bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-200 hover:bg-primary/10 hover:text-primary dark:hover:bg-primary/20 dark:hover:text-primary-light transition-colors"
+                        className="px-3 py-1.5 rounded-full text-sm font-medium bg-gray-700 text-gray-200 hover:bg-primary/20 hover:text-primary-light transition-colors"
                       >
                         {skill}
                       </motion.span>
@@ -262,11 +261,11 @@ const LearningPage = () => {
               >
                 <motion.div 
                   whileHover={{ y: -5 }}
-                  className="p-6 rounded-xl bg-white dark:bg-gray-800 shadow-lg border border-gray-200 dark:border-gray-700"
+                  className="p-6 rounded-xl bg-gray-800 shadow-lg border border-gray-700"
                 >
-                  <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-4 flex items-center gap-2">
-                    <span className="bg-primary/10 dark:bg-primary/20 p-1 rounded-full">
-                      <FiCheck className="text-primary dark:text-primary-light" />
+                  <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">
+                    <span className="bg-primary/20 p-1 rounded-full">
+                      <FiCheck className="text-primary-light" />
                     </span>
                     Course Features
                   </h3>
@@ -279,10 +278,10 @@ const LearningPage = () => {
                       'Lifetime access to materials'
                     ].map((item, index) => (
                       <li key={index} className="flex items-start gap-3">
-                        <span className="flex-shrink-0 mt-1 text-primary dark:text-primary-light">
+                        <span className="flex-shrink-0 mt-1 text-primary-light">
                           <FiCheck />
                         </span>
-                        <span className="text-gray-600 dark:text-gray-300">{item}</span>
+                        <span className="text-gray-300">{item}</span>
                       </li>
                     ))}
                   </ul>
@@ -290,11 +289,11 @@ const LearningPage = () => {
 
                 <motion.div 
                   whileHover={{ y: -5 }}
-                  className="p-6 rounded-xl bg-white dark:bg-gray-800 shadow-lg border border-gray-200 dark:border-gray-700"
+                  className="p-6 rounded-xl bg-gray-800 shadow-lg border border-gray-700"
                 >
-                  <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-4 flex items-center gap-2">
-                    <span className="bg-primary/10 dark:bg-primary/20 p-1 rounded-full">
-                      <FiChevronRight className="text-primary dark:text-primary-light" />
+                  <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">
+                    <span className="bg-primary/20 p-1 rounded-full">
+                      <FiChevronRight className="text-primary-light" />
                     </span>
                     Learning Outcomes
                   </h3>
@@ -307,15 +306,14 @@ const LearningPage = () => {
                       'Competitive advantage'
                     ].map((item, index) => (
                       <li key={index} className="flex items-start gap-3">
-                        <span className="flex-shrink-0 mt-1 text-primary dark:text-primary-light">
+                        <span className="flex-shrink-0 mt-1 text-primary-light">
                           <FiChevronRight />
                         </span>
-                        <span className="text-gray-600 dark:text-gray-300">{item}</span>
+                        <span className="text-gray-300">{item}</span>
                       </li>
                     ))}
                   </ul>
                 </motion.div>
-
               </motion.div>
             </div>
           </div>

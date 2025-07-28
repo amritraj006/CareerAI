@@ -115,7 +115,7 @@ export default function CareerTestPage() {
   // Start timer when question changes
   useEffect(() => {
     if (step === 'test' && questions.length > 0) {
-      setTimeLeft(50);
+      setTimeLeft(60);
       
       timerRef.current = setInterval(() => {
         setTimeLeft(prevTime => {

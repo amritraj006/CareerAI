@@ -87,7 +87,7 @@ const Payment = () => {
         style: { background: '#16a34a', color: 'white' },
         duration: 1000,
       });
-      setTimeout(() => navigate('/'), 1000);
+      setTimeout(() => navigate('/cart'), 1000);
     } catch (err) {
       toast.error('Payment failed: ' + err.message);
     } finally {
